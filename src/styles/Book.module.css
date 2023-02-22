@@ -1,0 +1,16 @@
+.book-tile {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.book-details {
+  padding: 2% 10%;
+  width: 70%;
+  text-align: left;
+}
+
+.book-details > * {
+  padding: 0;
+  margin: 0;
+}
