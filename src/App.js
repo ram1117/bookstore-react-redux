@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Books from './components/Books';
 import Categories from './components/Categories';
@@ -8,9 +8,9 @@ const App = () => (
   <div className="App">
     <Navbar />
     <Routes>
-      <Route index element={<Books />} />
-      <Route path="books" element={<Books />} />
-      <Route path="categories" element={<Categories />} />
+      <Route index element={<Navigate to="/books" replace />} />
+      <Route path="/books" element={<Books />} />
+      <Route path="/categories" element={<Categories />} />
     </Routes>
   </div>
 );
