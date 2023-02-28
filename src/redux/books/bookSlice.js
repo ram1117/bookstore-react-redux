@@ -27,18 +27,19 @@ const bookSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, { payload }) => {
-      const newState = { ...state };
       const bookObj = {
         item_id: nanoid(),
         title: payload.title,
         author: payload.author,
         category: payload.category,
       };
+      state.list.push(bookObj);
       addBookstoAPI(bookObj);
-      return newState;
+      return state;
     },
     removeBook: (state, { payload }) => {
       const newState = { ...state };
+      newState.list = state.list.filter((item) => item.item_id !== payload);
       removeBookfromAPI(payload);
       return newState;
     },
@@ -50,7 +51,7 @@ const bookSlice = createSlice({
         const booksList = [];
         Object.keys(action.payload).forEach((id) => {
           const result = action.payload[id][0];
-          result.itemId = id;
+          result.item_id = id;
           booksList.push(result);
         });
         newState.list = booksList;

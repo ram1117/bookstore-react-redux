@@ -17,7 +17,7 @@ const Books = () => {
     <>
       <div className="books-container">
         {books.map((item) => (
-          <Book key={item.itemId} book={item} />
+          <Book key={item.item_id} book={item} />
         ))}
       </div>
       <BookForm />

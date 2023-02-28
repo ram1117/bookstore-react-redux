@@ -5,17 +5,17 @@ import styles from '../styles/Book.module.css';
 
 const Book = ({ book }) => {
   const {
-    itemId, title, author, category,
+    title, author, category,
   } = book;
   const dispatch = useDispatch();
   return (
-    <div className={styles['book-tile']} id={itemId}>
+    <div className={styles['book-tile']} id={book.item_id}>
       <div className={styles['book-details']}>
         <h2>{title}</h2>
         <p>{author}</p>
         <p>{category}</p>
       </div>
-      <button type="button" onClick={() => { dispatch(removeBook(itemId)); }}>remove</button>
+      <button type="button" onClick={() => { dispatch(removeBook(book.item_id)); }}>remove</button>
     </div>
   );
 };
