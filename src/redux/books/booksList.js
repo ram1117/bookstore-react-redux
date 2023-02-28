@@ -19,4 +19,13 @@ const booksList = [
   },
 ];
 
+export const categories = [
+  '',
+  'Fiction',
+  'Nonfiction',
+  'SciFi',
+  'History',
+  'Biography',
+];
+
 export default booksList;

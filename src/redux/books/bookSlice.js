@@ -12,7 +12,7 @@ const bookSlice = createSlice({
         itemId: `item${state.length + 1}`,
         title: payload.title,
         author: payload.author,
-        category: 'undefined',
+        category: payload.category,
       });
       return newState;
     },
