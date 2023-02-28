@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
-import { categories } from '../redux/books/booksList';
+import categories from '../redux/books/categoriesList';
 import styles from '../styles/BookForm.module.css';
 
 const BookForm = () => {

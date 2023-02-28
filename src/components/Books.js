@@ -1,14 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks, getStatus } from '../redux/books/bookSlice';
 import Book from './Book';
 import BookForm from './BookForm';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.list);
+  const status = useSelector(getStatus);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchBooks());
+    }
+  }, [status, dispatch]);
   return (
     <>
       <div className="books-container">
         {books.map((item) => (
-          <Book key={item.itemId} book={item} />
+          <Book key={item.item_id} book={item} />
         ))}
       </div>
       <BookForm />
