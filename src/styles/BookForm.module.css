@@ -8,3 +8,7 @@
   padding: 1%;
   margin: 1%;
 }
+
+.error-message {
+  color: red;
+}

@@ -7,6 +7,7 @@ import styles from '../styles/BookForm.module.css';
 const BookForm = () => {
   const dispatch = useDispatch();
   const [inputs, setInputs] = useState({});
+  const [errMsg, setErrMsg] = useState('');
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((values) => ({ ...values, [name]: value }));
@@ -23,6 +24,9 @@ const BookForm = () => {
       dispatch(addBook(inputs));
       setInputs({});
       e.target.reset();
+    } else {
+      setErrMsg('Please enter all fields!!!!!');
+      setTimeout(() => { setErrMsg(''); }, 1000);
     }
   };
   return (
@@ -67,6 +71,7 @@ const BookForm = () => {
         </select>
         <button className={styles['form-input']} type="submit">ADD BOOK</button>
       </form>
+      <h3 className={styles['error-message']}>{errMsg}</h3>
     </>
   );
 };
