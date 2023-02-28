@@ -7,9 +7,12 @@ import BookForm from './BookForm';
 const Books = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books.list);
+  const status = useSelector((state) => state.books.status);
   useEffect(() => {
-    dispatch(fetchBooks());
-  }, [dispatch]);
+    if (status === 'idle') {
+      dispatch(fetchBooks());
+    }
+  }, [status, dispatch]);
   return (
     <>
       <div className="books-container">
