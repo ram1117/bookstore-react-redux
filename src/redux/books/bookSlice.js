@@ -1,5 +1,5 @@
 import { createSlice, nanoid, createAsyncThunk } from '@reduxjs/toolkit';
-// import booksList from './booksList';
+import axios from 'axios';
 
 const URL_FETCH_BOOKS = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Lz0Xg73BN9mDXt1XFhvh/books';
 const URL_BOOKS = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Lz0Xg73BN9mDXt1XFhvh/books';
@@ -19,20 +19,9 @@ const addBookstoAPI = async (bookObj) => {
     method: 'POST',
     body: JSON.stringify(bookObj),
     headers: { 'Content-type': 'application/json' },
-  }).then((response) => response.text());
+  });
 };
-const removeBookfromAPI = async (id) => {
-  // const reqbody = { item_id: id };
-  // console.log(reqbody);
-  // console.log(id);
-  // console.log(`${URL_BOOKS}/${id}`);
-  const msg = await fetch(`${URL_BOOKS}/${id}`, {
-    method: 'POST',
-    body: JSON.stringify({ item_id: id }),
-    headers: { 'Content-type': 'application/json' },
-  }).then((response) => response.text());
-  console.log(msg);
-};
+const removeBookfromAPI = async (id) => axios.delete(`${URL_BOOKS}/${id}`);
 const bookSlice = createSlice({
   name: 'books',
   initialState,
@@ -46,13 +35,11 @@ const bookSlice = createSlice({
         category: payload.category,
       };
       addBookstoAPI(bookObj);
-      newState.status = 'idle';
       return newState;
     },
     removeBook: (state, { payload }) => {
       const newState = { ...state };
       removeBookfromAPI(payload);
-      newState.status = 'idle';
       return newState;
     },
   },
@@ -77,5 +64,6 @@ const bookSlice = createSlice({
   },
 });
 
+export const getStatus = (state) => state.books.status;
 export const { addBook, removeBook } = bookSlice.actions;
 export default bookSlice.reducer;
