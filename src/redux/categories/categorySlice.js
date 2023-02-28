@@ -1,15 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const PAGE_STATUS = 'Under Construction...';
 const initialState = {
   categories: [],
-  status: 'Under Construction',
+  status: '',
 };
 
 const categorySlice = createSlice({
   name: 'category',
   initialState,
   reducers: {
-    checkStatus: (state) => state.status,
+    checkStatus: (state) => {
+      const newState = { ...state };
+      newState.status = PAGE_STATUS;
+      return newState;
+    },
   },
 });
 
