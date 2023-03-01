@@ -30,49 +30,51 @@ const BookForm = () => {
     }
   };
   return (
-    <>
-      <h2>Add new Book</h2>
+    <div className={styles['form-wrapper']}>
+      <h2>ADD NEW BOOK</h2>
       <form
         className={styles['book-from']}
         onSubmit={handleSubmit}
       >
-        <input
-          className={styles['form-input']}
-          name="title"
-          onChange={handleChange}
-          id="booktitle"
-          type="text"
-          placeholder="enter book name"
-          aria-label="book title"
-        />
-        <input
-          className={styles['form-input']}
-          name="author"
-          onChange={handleChange}
-          id="author"
-          type="text"
-          placeholder="enter author"
-          aria-label="author name"
-        />
-        <select
-          className={styles['form-input']}
-          name="category"
-          onChange={handleSelectChange}
-          aria-label="category"
-        >
-          {categories.map((item) => (
-            <option
-              key={item}
-              value={item}
-            >
-              {item}
-            </option>
-          ))}
-        </select>
-        <button className={styles['form-input']} type="submit">ADD BOOK</button>
+        <div className={styles['input-wrapper']}>
+          <input
+            className={styles['form-input']}
+            name="title"
+            onChange={handleChange}
+            id="booktitle"
+            type="text"
+            placeholder="Book Title"
+            aria-label="book title"
+          />
+          <input
+            className={styles['form-input']}
+            name="author"
+            onChange={handleChange}
+            id="author"
+            type="text"
+            placeholder="Book Author"
+            aria-label="author name"
+          />
+          <select
+            className={styles['form-input-select']}
+            name="category"
+            onChange={handleSelectChange}
+            aria-label="category"
+          >
+            {categories.map((item) => (
+              <option
+                key={item}
+                value={item}
+              >
+                {item}
+              </option>
+            ))}
+          </select>
+          <button className={styles['form-input-button']} type="submit">ADD BOOK</button>
+        </div>
       </form>
       <h3 className={styles['error-message']}>{errMsg}</h3>
-    </>
+    </div>
   );
 };
 export default BookForm;

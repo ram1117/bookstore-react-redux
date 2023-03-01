@@ -9,7 +9,7 @@ const App = () => (
     <Navbar />
     <Routes>
       <Route index element={<Navigate to="/books" replace />} />
-      <Route path="/books" element={<Books />} />
+      <Route path="/books" element={<Books className="books-container" />} />
       <Route path="/categories" element={<Categories />} />
     </Routes>
   </div>

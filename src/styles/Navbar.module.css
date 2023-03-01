@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  font-family: Montserrat, sans-serif;
+  background: #fff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.nav-logo {
+  color: #0290ff;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.nav-list-items {
+  margin: 0 5%;
+}
+
+.nav-list-items > a {
+  font-size: 0.9rem;
+  color: #888;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-list-items > a:active {
+  color: #121212;
+}
+
+.navbar > svg {
+  color: #0290ff;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
