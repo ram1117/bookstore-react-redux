@@ -1,16 +1,131 @@
 .book-tile {
-  width: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 2% 5%;
+  font-family: RobotoSlab, sans-serif;
+  border: solid 1px white;
+  border-radius: 4px;
 }
 
 .book-details {
-  padding: 2% 10%;
-  width: 70%;
+  width: 60%;
   text-align: left;
 }
 
+.book-category {
+  font-family: Montserrat, sans-serif;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.book-author,
+.book-controls > * {
+  height: 1.2rem;
+  font-size: 0.875rem;
+  color: #4386bf;
+}
+
+.book-title {
+  font-size: 1.4rem;
+  height: 1.8rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
 .book-details > * {
+  margin: 2% 0;
+}
+
+.book-controls > button {
+  border: none;
+  background: none;
+  text-align: center;
+}
+
+.book-controls {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
   padding: 0;
+}
+
+.book-controls > * {
+  text-align: left;
+  cursor: pointer;
+  width: 30%;
+}
+
+.book-controls li:first-of-type {
+  border-right: solid 1px #e8e8e8;
+  text-align: left;
+}
+
+.book-controls li:last-of-type {
+  border-left: solid 1px #e8e8e8;
+  text-align: center;
+}
+
+.progress-wrapper {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  color: #121212;
+}
+
+.progress-bar {
+  width: 6rem;
+}
+
+.progress-status > h2 {
+  height: 2.5rem;
+  font-size: 2rem;
+  font-weight: normal;
   margin: 0;
+}
+
+.progress-status {
+  padding: 5%;
+  text-align: center;
+}
+
+.progress-status > p {
+  height: 1.125rem;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.chapter-info {
+  width: 20%;
+  color: #121212;
+  text-align: center;
+}
+
+.chapter-header {
+  height: 1em;
+  font-size: 0.7em;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+.chapter-no {
+  height: 1.5em;
+  font-size: 1.3em;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+}
+
+.chapter-btn {
+  cursor: pointer;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  padding: 3% 10%;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
 }
