@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 80%;
+  margin: 10% auto;
+  box-shadow: 10px 10px 10px 10px #888;
 }
 
 .navbar {
@@ -17,4 +20,9 @@
 
 .nav-list-items {
   margin: 0 10%;
+}
+
+.books-container {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3% 0;
 }

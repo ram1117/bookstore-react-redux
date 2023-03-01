@@ -1,12 +1,49 @@
-.book-form {
+.form-wrapper {
+  margin: 5% 5% 15%;
+  border-top: solid 1px #e8e8e8;
+  font-family: Montserrat, sans-serif;
+}
+
+.input-wrapper {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
 }
 
+.form-wrapper h2 {
+  color: #888;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+}
+
 .form-input {
+  width: 30%;
+  padding: 1% 1%;
+  margin-right: 1%;
+  border: #e8e8e8 solid 2px;
+}
+
+.form-input-select,
+.form-input-button {
+  width: 20%;
   padding: 1%;
-  margin: 1%;
+  margin: 0 1%;
+}
+
+.form-input-select {
+  background: #fff;
+  border: #e8e8e8 solid 2px;
+}
+
+.form-input-button {
+  cursor: pointer;
+  font-family: RobotoSlab, sans-serif;
+  color: #fff;
+  font-size: 0.81rem;
+  font-weight: bold;
+  background-color: #0290ff;
+  border: none;
 }
 
 .error-message {

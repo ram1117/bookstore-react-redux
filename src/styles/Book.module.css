@@ -1,15 +1,16 @@
 .book-tile {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 2% 5%;
+  padding: 2% 3%;
   font-family: RobotoSlab, sans-serif;
-  border: solid 1px white;
+  background: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
 .book-details {
-  width: 60%;
+  width: 50%;
   text-align: left;
 }
 
@@ -34,10 +35,11 @@
   font-weight: bold;
   letter-spacing: -0.2px;
   color: #121212;
+  margin-bottom: 0;
 }
 
-.book-details > * {
-  margin: 2% 0;
+.book-author {
+  margin-top: 0;
 }
 
 .book-controls > button {
@@ -49,7 +51,6 @@
 .book-controls {
   width: 80%;
   display: flex;
-  justify-content: space-between;
   list-style: none;
   padding: 0;
 }
@@ -57,21 +58,21 @@
 .book-controls > * {
   text-align: left;
   cursor: pointer;
-  width: 30%;
 }
 
 .book-controls li:first-of-type {
   border-right: solid 1px #e8e8e8;
+  padding-right: 5%;
   text-align: left;
 }
 
 .book-controls li:last-of-type {
   border-left: solid 1px #e8e8e8;
+  padding-left: 5%;
   text-align: center;
 }
 
 .progress-wrapper {
-  width: 20%;
   display: flex;
   align-items: center;
   font-family: Montserrat, sans-serif;
@@ -79,7 +80,8 @@
 }
 
 .progress-bar {
-  width: 6rem;
+  width: 25%;
+  height: 25%;
 }
 
 .progress-status > h2 {
@@ -103,7 +105,9 @@
 .chapter-info {
   width: 20%;
   color: #121212;
-  text-align: center;
+  text-align: left;
+  padding-left: 5%;
+  border-left: #e8e8e8 solid 1px;
 }
 
 .chapter-header {

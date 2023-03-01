@@ -14,14 +14,12 @@ const Books = () => {
     }
   }, [status, dispatch]);
   return (
-    <>
-      <div className="books-container">
-        {books.map((item) => (
-          <Book key={item.item_id} book={item} />
-        ))}
-      </div>
+    <div className="books-container">
+      {books.map((item) => (
+        <Book key={item.item_id} book={item} />
+      ))}
       <BookForm />
-    </>
+    </div>
   );
 };
 export default Books;
