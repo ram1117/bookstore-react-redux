@@ -28,7 +28,6 @@
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
@@ -36,18 +35,17 @@
 
 # 📖 Book Store <a name="about-project"></a>
 
-**Book Store** is a Single Page Application developed using React and Redux. We use the `create-react-app` build tool for development.
+**Book Store** is a  React application developed using React and Redux. I used `create-react-app` and `redux-toolkit` tools for development.A user can add a book to the App and update their reading progress, which will be persisted in an API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
+
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://redux-toolkit.js.org">Redux Toolkit</a></li>
   </ul>
-</details>
 
 
 <!-- Features -->
@@ -55,6 +53,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Use redux**
+- **Persist changes in API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,9 +61,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Link will be added after deployment
+The project is deployed in Render. Please find the link Live Demo link below
 
-<!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
+- [Live Demo Link](https://bookstore-react-redux-vei5.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,13 +80,12 @@ In order to run this project you need the following installed in your local mach
 <ul>
 <li>Node.js</li>
 <li>git</li>
+<li>Github Account</li>
 </ul>
 
 ### Setup
 
 Clone this repository to your desired folder:
-
-Example commands:
 
 ```sh
   cd <desired-folder>
@@ -99,8 +97,6 @@ Example commands:
 
 Install this project with:
 
-Example command:
-
 ```sh
   npm install
 ```
@@ -111,8 +107,6 @@ The above command installs necessary node modules used in the project
 
 To run the project, execute the following command:
 
-Example command:
-
 ```sh
   npm run start
 ```
@@ -121,22 +115,16 @@ The above command opens the project webpage in your browser.
 
 ### Run tests
 
-To run tests, run the following command:
-
-
-Example command:
+There are no test cases added in the project. You can add jest test cases and run 
+them with the following command.
 
 ```sh
 npm run test
 ```
 
-The above command runs jest test suites in the project
-
 ### Deployment
 
 You can deploy this project using:
-
-Example:
 
 ```sh
 
@@ -183,17 +171,7 @@ Feel free to check the [issues page](https://github.com/ram1117/bookstore-react-
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, please give a Start to the github repo.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
->To be updated at the end of the project
-
-I would like to thank...
+If you like this project, please give a Start to the [github repo](https://github.com/ram1117/bookstore-react-redux).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
