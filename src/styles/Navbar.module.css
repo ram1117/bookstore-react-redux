@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem 1.6rem 6.3rem;
+  height: 6em;
+  margin: 0 0 2.4rem;
+  font-family: Montserrat, sans-serif;
+  background: #fff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.nav-logo {
+  color: #0290ff;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.nav-list-items {
+  margin: 0 5%;
+}
+
+.nav-list-items > a {
+  font-size: 0.9rem;
+  color: #121212;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-list-items > a:active {
+  color: #888;
+}
+
+.navbar > svg {
+  color: #0290ff;
+  width: 2.5rem;
+  height: 2.5rem;
+}
